@@ -66,7 +66,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'api/welcome',
             position: 'left',
             label: 'API Reference',
           },
