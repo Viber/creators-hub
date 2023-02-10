@@ -68,25 +68,53 @@ const config = {
             type: 'doc',
             docId: 'api/welcome',
             position: 'left',
-            label: 'API Reference',
+            label: 'Bots API',
           },
+          {
+            type: 'dropdown',
+            label: 'SDKs',
+            position: 'left',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'javascriptSDKSidebar',
+                label: 'Javascript',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'pythonSDKSidebar',
+                label: 'Python',
+              }
+            ]
+          },
+          
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
+          {
+            href: 'https://help.viber.com',
+            label: 'Support',
+            target: '_blank',
+            position: 'right',
+          }
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Viber Creators',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Home',
+                href: 'https://creators.viber.com',
               },
+              {
+                label: 'Blog',
+                href: 'https://creators.viber.com/blog',
+              }
             ],
           },
           {
@@ -107,16 +135,12 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Social',
             items: [
               {
-                label: 'Blog',
+                label: 'Twitter',
                 to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+              }
             ],
           },
         ],
