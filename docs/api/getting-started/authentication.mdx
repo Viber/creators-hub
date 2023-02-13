@@ -2,6 +2,7 @@
 sidebar_label: Authentication
 sidebar_position: 3
 ---
+import AuthToken from './img/authToken.jpg'
 
 # Authentication
 
@@ -15,13 +16,13 @@ Upon creation of your Viber bot, an authentication token will be generated. This
 be viewed by the account’s administrators in the “edit info” screen of their bot or on the<br/>
 [Viber Admin Panel](https://partners.viber.com/login).
 
-![Edit Info Screen](./img/authToken.jpeg)
+<img src={AuthToken} width="40%" height="auto"/>
 
 ## Using the Authentication Token
 The authentication token must be included in the header of every API request you make.<br/>
 The header should include the following field:
 
-```makefile title="Http Header"
+```makefile title="HTTP Header"
 X-Viber-Auth-Token: <YOUR_AUTHENTICATION_TOKEN>
 ```
 
