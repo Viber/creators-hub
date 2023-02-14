@@ -1,4 +1,4 @@
 ---
 sidebar_label: Setup Your Environment
-sidebar_position: 2
+sidebar_position: 1
 ---
