@@ -48,7 +48,7 @@ The JSON representation of a text message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720 |
-| tracking_data | string | **Optional** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional** Max 4000 characters |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional** Max 4000 characters |
 | type | string | The message type. | **Required.** Always `text`. |
 | text | string | The message text. | **Required.** Max 7000 characters. |
 
@@ -79,7 +79,7 @@ The JSON representation of a picture message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `picture`. |
 | text | string | Description of the picture. | **Required.** Max 512 characters. Can be an empty string if irrelevant. |
 | media | string | The URL of the picture. Supported file formats include jpeg, png, and non-animated gif. | **Required.** The URL must have a resource with a `.jpeg`, `.png`, or `.gif` file extension as the last path segment. For example, the URL should be in the format of `http://www.example.com/path/image.jpeg.` Please note that animated GIFs can be sent as either URL messages or file messages. Additionally, keep in mind that the maximum image size is 1MB on iOS and 3MB on Android. |
@@ -113,7 +113,7 @@ The JSON representation of a video message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `video`. |
 | media | string | The URL of the video. Supported file formats include mp4 | **Required.** The URL must have a resource with a `.mp4` file extension as the last path segment. For example, the URL should be in the format of `http://www.example.com/path/video.mp4.` |
 | thumbnail | string | URL of a reduced size image to be used as a thumbnail. Supported file formats include jpeg only | **Optional.** Recommended dimensions for the thumbnail are 4000x400. maxium image size 100KB. |
@@ -147,7 +147,7 @@ The JSON representation of a file message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `file`. |
 | media | string | The URL of the file. | **Required.** The URL must end with a file extension as the last segment of the path. For instance, the URL should follow this format: `http://www.example.com/path/file.pdf`. Please note that certain file types are not supported. For a comprehensive list of forbidden file formats, please refer to the [forbidden file formats](#forbidden-file-formats) section below  |
 | size | integer | The size of the file in bytes | **Required.** Max size 50MB(52428800b)|
@@ -193,7 +193,7 @@ The JSON representation of a contact message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `contact`. |
 | contact.name | string | The name of the contact | **Required.** Max 28 characters. |
 | contact.phone_number | string | The phone number of the contact | **Required.** Max 18 characters. The phone number should contain the country code and should only include numbers. For example, a valid American phone number could be formatted as follows: `+15555555555`, where `+1` is the country code for the United States. Including any characters other than numbers in the phone number field can result in errors or failure to send messages. Please ensure that the phone number follows the correct formatting guidelines to avoid any issues. |
@@ -226,7 +226,7 @@ The JSON representation of a location message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `location`. |
 | location.lat | float | The latitude of the location. | **Required.** |
 | location.lon | float | The longitude of the location. | **Required.** |
@@ -256,7 +256,7 @@ The JSON representation of a contact message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `url`. |
 | media | string | The URL to open. | **Required.** Max 2000 characters|
 
@@ -285,7 +285,7 @@ The JSON representation of a sticker message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `sticker`. |
 | sticker_id | string | The sticker ID. | **Required.** |
 
@@ -417,7 +417,7 @@ The JSON representation of a Rich Media message is as follows:
 | min_api_version | integer | The minimum API version required by clients to receive this message<br/>(default 1). | **Optional.** It is important to note that the client version must support the API version specified. If the version number is set below the required version for certain features, those features may not work as expected. |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | **Optional.** Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `rich_media`. |
 | rich_media.Type | string | The type of the rich media message. | **Required.** Always `rich_media`. |
 | rich_media.ButtonsGroupColumns | integer | The number of columns in the grid of each card. | **Required.** The number of columns must be between 1 and 6. |
