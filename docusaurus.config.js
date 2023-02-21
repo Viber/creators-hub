@@ -65,10 +65,16 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'api/welcome',
+            type: 'dropdown',
+            label: 'Develop',
             position: 'left',
-            label: 'Bots API',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'botsAPISidebar',
+                label: 'Bots API',
+              }
+            ]
           },
           {
             type: 'dropdown',
@@ -87,7 +93,6 @@ const config = {
               }
             ]
           },
-          
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
