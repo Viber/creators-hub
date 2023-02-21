@@ -1,5 +1,5 @@
 ---
-sidebar_label: Welcome
+sidebar_label: The Bots API
 sidebar_position: 1
 ---
 
