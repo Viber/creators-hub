@@ -1,7 +1,7 @@
 ---
 sidebar_label: Retrieve Your Application Info
 sidebar_position: 2
-slug: /api/resources/app/get-info
+slug: get-info
 ---
 
 # Retrieve Your Application Info
