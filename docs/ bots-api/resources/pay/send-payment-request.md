@@ -40,16 +40,6 @@ curl -X POST https://chatapi.viber.com/pa/send_message -H "X-Viber-Auth-Token: Y
 '{"auth_token":  "445da6az1s345z78-dazcczb2542zv51a-e0vc5fva17480im9", "receiver": "01234567890A==" "min_api_version": 10, "type": "payment", "payment": {"type": "GooglePay", "description":"2 shirts XL",     "total_price": 1.85, "currency_code": "EUR", "payment_parameters":[{"key": "gateway", "value": "liqpay"}, {"key": "gatewayMerchantId", "value": "abc123"}, {"key": "url", "value": "https://www.liqpay.ua/api/viber"}, {"key": "data",	"value": "qwerty12345"}, {"key": "signature", "value": "123abc"	}, {"key":"payeeId","value":"abc123"}]}}'
 ```
 
-#### Response
----
-#### Attributes
-| Name | Type | Description | Notes |
-| --- | --- | --- | --- |
-
-#### Headers
----
-**Content-Type:** application/json
-
 ### Response
 
 #### Attributes
