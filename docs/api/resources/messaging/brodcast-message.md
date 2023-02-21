@@ -1,22 +1,22 @@
 ---
-sidebar_label: Send a Message
-sidebar_position: 3
+sidebar_label: Broadcast Messaging
+sidebar_position: 4
 ---
 
-# Send a Message
+# Broadcast Messaging
 
-**`POST` https://<area/>chatapi.viber.com/pa/send_message**
+**`POST` https://<area/>chatapi.viber.com/pa/broadcast_message**
 
-This endpoint allows you to send a message to a subscriber of your bot.
+This endpoint allows you to send a broadcast message to all your subscribers.
+You can use any message type that is supported by the API, including text, picture, video, file, location, contact, sticker, URL and rich media messages.
+To learn more about the message types, see [Message Data Model](../../data-models/message).
 
 :::note Pay attention
 
-The following limitations apply to the `send_message` endpoint:
-* You can send up to 100 messages to a user within an hour without receiving a reply. The<br/>
-message count towards the limit will reset when the user replies to a message. Once you<br/>
-have reached the limit, you will receive the following error response:<br/>
-`{"status":12,"status_message":"Too many requests", message_token: "1234567890", chat_hostname: "SN-CHAT-0x_"}`
-* Maximum message size is 30KB.
+The following limitations apply to broadcast messages:
+* You can send a brodcast message to a maximum of 300 subscriber per request.
+* You are limited to 500 requests per 10 seconds.
+* The maximum size of the message is 30kb.
 
 :::
 
@@ -36,10 +36,11 @@ have reached the limit, you will receive the following error response:<br/>
 | sender.avatar | string | The avatar of the bot. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
 | tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional** Max 4000 characters |
 | min_api_version | integer | The minimum API version that the message is supported in. | **Optional** Default value is 1. |
+| broadcast_list | array of strings | The list of subscribers ids. | Max 300 ids |
 | Additional fileds based on the message type | | | |
 
 ```bash title="Example"
-curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Token: YOUR_AUTHENTICATION_TOKEN" -d '{"type":"text",receiver="jc9HsWTZ2Yf2NkRZ8KcNug==","text":"Hello World","sender":{"name":"Viber Bot","avatar":"http://avatar.example.com"}}'
+curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Token: YOUR_AUTHENTICATION_TOKEN" -d '{"type":"text","text":"Hello World","sender":{"name":"Viber Bot","avatar":"http://avatar.example.com"},"broadcast_list":["jc9HsWTZ2Yf2NkRZ8KcNug==","fd4HsWT33Yf1BkRZ8KcBsk=="]}'
 ```
 
 ### Response
@@ -63,7 +64,6 @@ curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Tok
   "billing_status": 0
 }
 ```
-
 #### Billing Statuses
 ---
 | Value | Name | Description |
@@ -74,3 +74,4 @@ curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Tok
 | 3 | outOfSessionFreeMessageNonBillableBot | Free out of session 1:1 message/keyboard sent by a non-billable bot |
 | 4 | outOfSessionFreeMessageForBillableBot | Free out of session 1:1 message/keyboard sent by a billable bot |
 | 5 | outOfSessionBilledMessage | Charged out of session 1:1 message/keyboard sent by a billable bot |
+
