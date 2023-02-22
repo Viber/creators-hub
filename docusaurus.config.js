@@ -97,8 +97,8 @@ const config = {
           },
           {
             href: 'https://github.com/Viber/creators-hub',
-            label: 'GitHub',
             position: 'right',
+            className: 'navbar-github-link'
           },
           {
             href: 'https://help.viber.com',
