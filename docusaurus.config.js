@@ -18,8 +18,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Viber', // Usually your GitHub org/user name.
+  projectName: 'creators-hub', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,10 +39,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Viber/creators-hub/edit/main/',
+          editUrl: 'https://github.com/Viber/creators-hub/edit/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         blog: false,
         theme: {
@@ -59,8 +58,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'dark'
+      },
       navbar: {
-        title: 'Viber Creators Docs',
+        title: 'Viber Creators Hub',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
