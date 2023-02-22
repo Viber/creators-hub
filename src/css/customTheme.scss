@@ -45,3 +45,17 @@
     opacity: 0.5;
   }
 }
+
+.navbar-sidebar{
+  .navbar-github-link{
+    &:after {
+      content: "GitHub";
+      background-image: none;
+      height: 20px;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+}
