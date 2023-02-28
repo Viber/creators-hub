@@ -434,7 +434,7 @@ The following table shows the properties of a card:
 | Columns | integer | The number of columns the card occupies. | **Optional.** The number of columns must be between 1 and 6. | 6 |
 | Rows | integer | The number of rows the card occupies. | **Optional.** The number of rows must be between 1 and 7. | 1 |
 BgColor | string | The background color of the card. | **Optional.** The color must be in hexadecimal format. | Default Viber button color |
-Silent | boolean | If set to `true`, the user action will not be displayed in the conversation. | **Optional.** | `false` |
+Silent | boolean | If set to `true`, the user action will not be displayed in the conversation. | **Optional.** Supported only on Viber 6.7 and above | `false` |
 BgMediaType | string | The type of the background media. | **Optional.** The value can be `picture` or `gif`. For picture jped and png file formats are supported | `picture` |
 BgMedia | string | The URL of the background media. | **Optional.** The media size should not exceed 500KB. |
 BgMediaScaleType | string | The scale type of the background media. | **Optional.**You can choose from the following options:  `crop`: scales the contents to fill the view with a fixed aspect ratio, which may result in some portions of the content being clipped. `fill`: scales the contents to fill the view without maintaining a fixed aspect ratio. `fit`: ensures that at least one axis (either X or Y) fits exactly while maintaining the aspect ratio of the content. |
