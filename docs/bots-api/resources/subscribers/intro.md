@@ -18,7 +18,7 @@ One of the critical features of the Viber Bot API is the ability to retrieve sub
 details. This feature enables you to get information about your subscribers, such as their<br/>
 name, phone number, and profile picture. You can use this information to personalize your<br/>
 bot's messages, customize user experiences, or better understand your user base.<br/>
-[Learn more](subscriber-details)
+[Learn more](subscriber-details.md)
 
 ## Checking Subscribers' Online Status
 
@@ -27,7 +27,7 @@ status. With this feature, you can see if a subscriber is currently online or of
 information is useful for sending messages or notifications at the appropriate time,<br/>
 ensuring that your messages reach subscribers when they are most likely to engage with<br/>
 your bot.<br/>
-[Learn more](subscribers-status)
+[Learn more](subscribers-status.md)
 
 ---
 

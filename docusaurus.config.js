@@ -11,8 +11,8 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Github pages configuration
-  url: 'https://creators.viber.com',
-  baseUrl: '/hub/',
+  url: 'https://viber.github.io',
+  baseUrl: '/',
   organizationName: 'Viber', 
   projectName: 'creators-hub',
   trailingSlash: false,
@@ -114,11 +114,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                href: 'https://creators.viber.com',
-              },
-              {
-                label: 'Blog',
-                href: 'https://creators.viber.com/blog',
+                href: 'https://creators.viber.com/hub/',
               }
             ],
           },
@@ -144,7 +140,7 @@ const config = {
             items: [
               {
                 label: 'Twitter',
-                to: '/blog',
+                to: 'https://twitter.com/Viber',
               }
             ],
           },

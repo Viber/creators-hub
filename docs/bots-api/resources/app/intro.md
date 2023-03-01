@@ -16,7 +16,7 @@ Using this endpoint, you can retrieve information about your bot that can be use
 customization and branding purposes. For example, you can obtain your bot's profile<br/>
 picture to use on your website or marketing materials. Additionally, you can use your bot's<br/>
 description to help users understand what your bot does and how it can help them.<br/>
-[Learn more](get-app-info)
+[Learn more](get-app-info.md)
 
 ---
 
