@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Viber Creators Hub',
+  tagline: 'Viber Creators Hub: Where Innovation Begins',
   favicon: 'img/favicon.ico',
 
   // Github pages configuration
@@ -43,6 +43,13 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/customTheme.scss'),
         },
+        gtag: {
+          trackingID: 'G-ZN8LH75H1G',
+          anonymizeIP: false,
+        },
+        googleTagManager: {
+          containerId: 'GTM-WGQL32B',
+        }
       }),
     ],
   ],
@@ -60,7 +67,7 @@ const config = {
       navbar: {
         title: 'Viber Creators Hub',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Viber Creators Hub Logo',
           src: 'img/logo.svg',
         },
         items: [
