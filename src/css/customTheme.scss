@@ -6,27 +6,64 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #7465d7;
-  --ifm-color-primary-dark: #5d4cd0;
-  --ifm-color-primary-darker: #523fcd;
-  --ifm-color-primary-darkest: #3f2eb0;
-  --ifm-color-primary-light: #8b7ede;
-  --ifm-color-primary-lighter: #968be1;
-  --ifm-color-primary-lightest: #b8b0eb;
+  --ifm-color-primary: #3f3e7f	;
+  --ifm-color-primary-dark: #29285E;
+  --ifm-color-primary-darker: #1C1B3D;
+  --ifm-color-primary-darkest: #0F0E20;
+  --ifm-color-primary-light: #5E5DAD;
+  --ifm-color-primary-lighter: #7D7CBF;
+  --ifm-color-primary-lightest: #B2B2E5;
   --ifm-code-font-size: 90%;
+  --ifm-font-family-base: "Source Sans Pro", system-ui, -apple-system, sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #816ff4;
-  --ifm-color-primary-dark: #644ef1;
-  --ifm-color-primary-darker: #563ef0;
-  --ifm-color-primary-darkest: #2e12e7;
-  --ifm-color-primary-light: #9e90f7;
-  --ifm-color-primary-lighter: #aca0f8;
-  --ifm-color-primary-lightest: #d8d2fc;
+  --ifm-color-primary: #9688F5	;
+  --ifm-color-primary-dark: #6B5FCC;
+  --ifm-color-primary-darker: #524A99;
+  --ifm-color-primary-darkest: #3A345D;
+  --ifm-color-primary-light: #B3A7FF;
+  --ifm-color-primary-lighter: #C8C2FF;
+  --ifm-color-primary-lightest: #E5E2FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 .navbar-github-link {
