@@ -1,0 +1,22 @@
+.widget {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 50px;
+  }
+  .cell {
+    width: 50px;
+  }
+  .reaction {
+    width: 100%;
+    border: black 1px solid;
+    &:hover {
+      border: black 1px solid;
+    }
+  }
+  .footer {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}

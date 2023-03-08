@@ -56,6 +56,13 @@ const config = {
 
   plugins: ['docusaurus-plugin-sass'],
 
+  scripts: [
+    {
+      src: 'https://app.happyreact.com/widget/reactions.js',
+      defer: true,
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
