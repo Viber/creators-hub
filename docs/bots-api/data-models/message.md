@@ -81,7 +81,7 @@ The JSON representation of a picture message is as follows:
 | sender.avatar | string | The URL of the bot's avatar. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
 | tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional.** Max 4000 characters. |
 | type | string | The message type. | **Required.** Always `picture`. |
-| text | string | Description of the picture. | **Required.** Max 512 characters. Can be an empty string if irrelevant. |
+| text | string | Description of the picture. | **Required.** Max 768 characters. Can be an empty string if irrelevant. |
 | media | string | The URL of the picture. Supported file formats include jpeg, png, and non-animated gif. | **Required.** The URL must have a resource with a `.jpeg`, `.png`, or `.gif` file extension as the last path segment. For example, the URL should be in the format of `http://www.example.com/path/image.jpeg.` Please note that animated GIFs can be sent as either URL messages or file messages. Additionally, keep in mind that the maximum image size is 1MB on iOS and 3MB on Android. |
 | thumbnail | string | URL of a reduced size image to be used as a thumbnail. Supported file formats include jpeg, png, and non-animated gif. | **Optional.** Recommended dimensions for the thumbnail are 4000x400. maxium image size 100KB. |
 
