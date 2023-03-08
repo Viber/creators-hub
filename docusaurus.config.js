@@ -36,7 +36,6 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/Viber/creators-hub/edit/main/',
-          showLastUpdateAuthor: true,
           showLastUpdateTime: true
         },
         blog: false,
@@ -54,7 +53,21 @@ const config = {
     ],
   ],
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'community',
+        path: 'community',
+        routeBasePath: '/community',
+        sidebarPath: require.resolve('./sidebarsCommunity.json'),
+        editUrl: 'https://github.com/Viber/creators-hub/edit/main/',
+        showLastUpdateTime: true
+      }),
+    ]
+  ],
 
   scripts: [
     {
@@ -106,6 +119,13 @@ const config = {
                 label: 'Python',
               }
             ]
+          },
+          {
+            type: 'doc',
+            docId: 'overview',
+            position: 'left',
+            label: 'Community',
+            docsPluginId: 'community'
           },
           {
             href: 'https://github.com/Viber/creators-hub',
