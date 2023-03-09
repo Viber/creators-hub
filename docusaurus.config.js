@@ -122,7 +122,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'overview',
+            docId: 'welcome',
             position: 'left',
             label: 'Community',
             docsPluginId: 'community'

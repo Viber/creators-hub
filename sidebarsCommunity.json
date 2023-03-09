@@ -5,7 +5,7 @@
             "label": "Community",
             "collapsed": false,
             "collapsible": false,
-            "items": ["overview","code-of-conduct", "contribution-guide", "creators-space", "staying-updated", "social-media"]
+            "items": ["welcome","code-of-conduct", "contribution-guide", "creators-space", "staying-updated", "social-media"]
         }
     ]
 }

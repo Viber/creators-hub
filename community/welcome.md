@@ -1,4 +1,4 @@
 ---
-sidebar_label: Overview
+sidebar_label: Welcome
 sidebar_position: 1
 ---
