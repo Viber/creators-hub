@@ -14,7 +14,8 @@ building amazing products and services.
 
 As a member of our community, you'll have access to a wealth of resources that are<br/>
 produced by the community and are in addition to our documentation site. These<br/>
-resources include case studies, articles about our platform, code examples, and much more to help you get started on your projects.
+resources include case studies, articles about our platform, code examples, and much<br/>
+more to help you get started on your projects.
 
 ## Community
 
