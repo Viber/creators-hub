@@ -13,7 +13,7 @@ const config = {
   // Github pages configuration
   url: 'https://viber.github.io',
   baseUrl: '/',
-  organizationName: 'Viber', 
+  organizationName: 'Viber',
   projectName: 'creators-hub',
   trailingSlash: false,
 
@@ -36,7 +36,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/Viber/creators-hub/edit/main/',
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {
@@ -48,7 +48,7 @@ const config = {
         },
         googleTagManager: {
           containerId: 'GTM-WGQL32B',
-        }
+        },
       }),
     ],
   ],
@@ -64,9 +64,9 @@ const config = {
         routeBasePath: '/community',
         sidebarPath: require.resolve('./sidebarsCommunity.json'),
         editUrl: 'https://github.com/Viber/creators-hub/edit/main/',
-        showLastUpdateTime: true
+        showLastUpdateTime: true,
       }),
-    ]
+    ],
   ],
 
   scripts: [
@@ -82,7 +82,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        defaultMode: 'dark'
+        defaultMode: 'dark',
       },
       navbar: {
         title: 'Viber Creators Hub',
@@ -100,8 +100,8 @@ const config = {
                 type: 'docSidebar',
                 sidebarId: 'botsAPISidebar',
                 label: 'Bots API',
-              }
-            ]
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -117,27 +117,27 @@ const config = {
                 type: 'docSidebar',
                 sidebarId: 'pythonSDKSidebar',
                 label: 'Python',
-              }
-            ]
+              },
+            ],
           },
           {
             type: 'doc',
             docId: 'welcome',
             position: 'left',
             label: 'Community',
-            docsPluginId: 'community'
+            docsPluginId: 'community',
           },
           {
-            href: 'https://github.com/Viber/creators-hub',
+            href: 'https://github.com/Viber',
             position: 'right',
-            className: 'navbar-github-link'
+            className: 'navbar-github-link',
           },
           {
             href: 'https://help.viber.com',
             label: 'Support',
             target: '_blank',
             position: 'right',
-          }
+          },
         ],
       },
       footer: {
@@ -147,9 +147,46 @@ const config = {
             title: 'Viber Creators',
             items: [
               {
-                label: 'Home',
-                href: 'https://creators.viber.com/hub/',
-              }
+                title: 'Home',
+                to: 'https://creators.viber.com/',
+              },
+              {
+                title: 'Hub',
+                to: 'https://creators.viber.com/hub/',
+              },
+              {
+                title: 'Blog',
+                to: 'https://creators.viber.com/blog/',
+              },
+              {
+                title: 'Terms and Conditions',
+                to: 'https://creators.viber.com/hub/terms-and-conditions/',
+              },
+              {
+                title: 'Privacy Policy',
+                to: 'https://creators.viber.com/hub/privacy-policy/',
+              },
+            ],
+          },
+          {
+            title: 'Company',
+            items: [
+              {
+                label: 'Rakuten Viber',
+                href: 'https://viber.com/',
+              },
+              {
+                label: 'Viber for Business',
+                href: 'https://viber.com/business/',
+              },
+              {
+                label: 'Careers',
+                href: 'https://viber.com/careers/',
+              },
+              {
+                label: 'Help Center',
+                href: 'https://help.viber.com',
+              },
             ],
           },
           {
@@ -157,15 +194,23 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/viber',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Blog',
+                href: 'https://creators.viber.com/blog',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Forum',
+                href: 'https://creators.viber.com/discuss',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://https://github.com/Viber',
+              },
+              {
+                label: 'Events',
+                href: 'https://creators.viber.com/events',
               },
             ],
           },
@@ -174,12 +219,24 @@ const config = {
             items: [
               {
                 label: 'Twitter',
-                to: 'https://twitter.com/Viber',
-              }
+                href: 'https://twitter.com/Viber',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/viber/',
+              },
+              {
+                label: 'Meetup',
+                href: 'https://www.meetup.com/Viber-Creators/',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/channel/UCZ1Z1Y1X5QYQZ7Z7Z7Z7Z7Q',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Rakuten Viber.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Viber Media S.à r.l.`,
       },
       prism: {
         theme: lightCodeTheme,
