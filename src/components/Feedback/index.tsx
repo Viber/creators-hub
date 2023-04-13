@@ -11,7 +11,6 @@ const VotedNo = () => {
 };
 
 export default function Feedback({resource}) {
-    //console.log(resource);
     const [reaction, setReaction] = useState(null);
 
     const isReacted = reaction === "Yes" || reaction === "No";
