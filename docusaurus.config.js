@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const dotenv = require('dotenv').config().parsed;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -43,11 +44,11 @@ const config = {
           customCss: require.resolve('./src/css/customTheme.scss'),
         },
         gtag: {
-          trackingID: 'G-ZN8LH75H1G',
+          trackingID: dotenv.GOOGLE_TRACKING_ID,
           anonymizeIP: false,
         },
         googleTagManager: {
-          containerId: 'GTM-WGQL32B',
+          containerId: dotenv.GOOGLE_CONTAINER_ID,
         },
       }),
     ],
@@ -85,6 +86,11 @@ const config = {
       defer: true,
     },
   ],
+
+  customFields: {
+    'GOOGLE_TRACKING_ID': dotenv.GOOGLE_TRACKING_ID,
+    'GOOGLE_CONTAINER_ID': dotenv.GOOGLE_CONTAINER_ID,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -157,23 +163,23 @@ const config = {
             title: 'Viber Creators',
             items: [
               {
-                title: 'Home',
+                label: 'Home',
                 to: 'https://creators.viber.com/',
               },
               {
-                title: 'Hub',
+                label: 'Hub',
                 to: 'https://creators.viber.com/hub/',
               },
               {
-                title: 'Blog',
+                label: 'Blog',
                 to: 'https://creators.viber.com/blog/',
               },
               {
-                title: 'Terms and Conditions',
+                label: 'Terms and Conditions',
                 to: 'https://creators.viber.com/hub/terms-and-conditions/',
               },
               {
-                title: 'Privacy Policy',
+                label: 'Privacy Policy',
                 to: 'https://creators.viber.com/hub/privacy-policy/',
               },
             ],
