@@ -157,23 +157,23 @@ const config = {
             title: 'Viber Creators',
             items: [
               {
-                title: 'Home',
+                label: 'Home',
                 to: 'https://creators.viber.com/',
               },
               {
-                title: 'Hub',
+                label: 'Hub',
                 to: 'https://creators.viber.com/hub/',
               },
               {
-                title: 'Blog',
+                label: 'Blog',
                 to: 'https://creators.viber.com/blog/',
               },
               {
-                title: 'Terms and Conditions',
+                label: 'Terms and Conditions',
                 to: 'https://creators.viber.com/hub/terms-and-conditions/',
               },
               {
-                title: 'Privacy Policy',
+                label: 'Privacy Policy',
                 to: 'https://creators.viber.com/hub/privacy-policy/',
               },
             ],
