@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -6,6 +6,8 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+import {GoogleAnalyticsTracker} from "@site/src/utils/google-analytics";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -28,6 +30,17 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  const gaTracker= new GoogleAnalyticsTracker(siteConfig.customFields.GOOGLE_TRACKING_ID);
+
+  useEffect(() => {
+      if (ExecutionEnvironment.canUseDOM) {
+          document.querySelector('[href="https://help.viber.com"]')
+              .addEventListener('click', () => {
+                 gaTracker.supportButtonClick();
+              });
+      }
+  })
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
