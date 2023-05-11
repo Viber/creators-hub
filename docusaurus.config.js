@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const dotenv = require('dotenv').config().parsed;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -43,11 +44,11 @@ const config = {
           customCss: require.resolve('./src/css/customTheme.scss'),
         },
         gtag: {
-          trackingID: 'G-ZN8LH75H1G',
+          trackingID: dotenv.GOOGLE_TRACKING_ID,
           anonymizeIP: false,
         },
         googleTagManager: {
-          containerId: 'GTM-WGQL32B',
+          containerId: dotenv.GOOGLE_CONTAINER_ID,
         },
       }),
     ],
@@ -85,6 +86,11 @@ const config = {
       defer: true,
     },
   ],
+
+  customFields: {
+    'GOOGLE_TRACKING_ID': dotenv.GOOGLE_TRACKING_ID,
+    'GOOGLE_CONTAINER_ID': dotenv.GOOGLE_CONTAINER_ID,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
