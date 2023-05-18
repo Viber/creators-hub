@@ -1,9 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const dotenv = require('dotenv').config().parsed;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -44,11 +44,11 @@ const config = {
           customCss: require.resolve('./src/css/customTheme.scss'),
         },
         gtag: {
-          trackingID: dotenv.GOOGLE_TRACKING_ID,
+          trackingID: process.env.GOOGLE_TRACKING_ID,
           anonymizeIP: false,
         },
         googleTagManager: {
-          containerId: dotenv.GOOGLE_CONTAINER_ID,
+          containerId: process.env.GOODLE_CONTAINER_ID,
         },
       }),
     ],
@@ -88,8 +88,8 @@ const config = {
   ],
 
   customFields: {
-    'GOOGLE_TRACKING_ID': dotenv.GOOGLE_TRACKING_ID,
-    'GOOGLE_CONTAINER_ID': dotenv.GOOGLE_CONTAINER_ID,
+    'GOOGLE_TRACKING_ID': process.env.GOOGLE_TRACKING_ID,
+    'GOOGLE_CONTAINER_ID': process.env.GOODLE_CONTAINER_ID,
   },
 
   themeConfig:
