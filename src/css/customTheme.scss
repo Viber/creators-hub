@@ -99,6 +99,24 @@
   }
 }
 
+.navbar-support-link {
+  background-color: var(--ifm-color-primary);
+  border-radius: 4px;
+  margin: 0 0.5rem;
+  padding: 0.25rem 0.75rem !important;
+  transition-property: all;
+  --ifm-link-hover-color: #fff;
+  --ifm-navbar-link-hover-color: #fff;
+  color: #fff;
+  font-size: 16px;
+
+  &:hover {
+    background-color: var(--ifm-color-primary-darker);
+    color: var(--ifm-navbar-link-hover-color);
+    text-decoration: none;
+  }
+}
+
 .theme-edit-this-page {
   background-color: var(--ifm-color-primary);
   border-radius: 4px;
