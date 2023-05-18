@@ -1,7 +1,8 @@
 import ReactGA4 from "react-ga4";
 import supportButtonClick from "@site/src/utils/google-analytics/events/supportButtonClick";
 
-const SUPPORT_BUTTON_CLICK = 'support_button_click';
+const SUPPORT_BUTTON_CLICK = 'support_button_clicked';
+const LOGO_CLICK = 'logo_clicked';
 
 export class GoogleAnalyticsTracker {
     containerId: string;
@@ -26,6 +27,10 @@ export class GoogleAnalyticsTracker {
 
     supportButtonClick(): void {
         ReactGA4.event(SUPPORT_BUTTON_CLICK, supportButtonClick);
+    }
+
+    logoButtonClick(): void {
+        ReactGA4.event(LOGO_CLICK);
     }
 }
 

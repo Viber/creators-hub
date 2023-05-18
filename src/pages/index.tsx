@@ -38,6 +38,9 @@ export default function Home(): JSX.Element {
               .addEventListener('click', () => {
                  gaTracker.supportButtonClick();
               });
+          document.querySelector('a.navbar__brand').addEventListener('click', () => {
+              gaTracker.logoButtonClick();
+          });
       }
   })
 
