@@ -34,21 +34,21 @@ curl -X POST https://chatapi.viber.com/pa/get_user_details -H "X-Viber-Auth-Toke
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| status | integer | The status of the request. | 0 for success. In case of error, an error code will be returned. See [common errors](../../errors) for more information |
-| status_message | string | The status message of the request. | ok for sucess. In case of error, one of the following errors will be returned:  `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information |
-|message_token|integer|The message token of the request.||
+| status | integer | The status of the request. | 0 for success. In case of error, an error code will be returned. See [common errors](../../errors) for more information. |
+| status_message | string | The status message of the request. | ok for success. In case of error, one of the following errors will be returned:  `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` or `failure`. See [common errors](../../errors) for more information. |
+|message_token | integer | The message token of the request. | |
 | user | object | The subscriber details. | |
 | user.id | string | The id of the subscriber. | |
 | user.name | string | The name of the subscriber. | |
 | user.avatar | string | The avatar of the subscriber. | |
-| user.country | string | The country of the subscriber. | 2 letters country code ([ISO ALPHA-2](https://www.iban.com/country-codes)) |
-| user.language | string | The language of the subscriber. | 2 letters language code ([ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) |
-|user.primary_device_os|string|The primary device OS of the subscriber.||
-|user.api_version|integer|The API version of the subscriber.| Currently only 1. Additional versions will be added in the future |
-|user.viber_version|string|The Viber version of the subscriber.||
-|user.mcc|integer|The mobile country code of the subscriber.||
-|user.mnc|integer|The mobile network code of the subscriber.||
-|user.device_type|string|The device type of the subscriber.||
+| user.country | string | The country of the subscriber. | 2 letters country code ([ISO ALPHA-2](https://www.iban.com/country-codes)). |
+| user.language | string | The language of the subscriber. | 2 letters language code ([ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)). |
+| user.primary_device_os | string | The primary device OS of the subscriber. | |
+| user.api_version | integer | The API version of the subscriber. | Currently only 1. Additional versions will be added in the future. |
+| user.viber_version | string | The Viber version of the subscriber. | |
+| user.mcc | integer | The mobile country code of the subscriber. | |
+| user.mnc | integer | The mobile network code of the subscriber. | |
+| user.device_type | string | The device type of the subscriber. | |
 
 #### Headers
 ---

@@ -25,4 +25,4 @@ The event payload is a JSON object with the following properties:
 | event | The event name. | Always `unsubscribed` |
 | timestamp | The time the event was triggered. | Unix timestamp in milliseconds |
 | user_id | The unique ID of the user. |
-| message_token | Unique ID of the message |
+| message_token | Unique ID of the message. |

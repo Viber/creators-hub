@@ -52,7 +52,7 @@ The event payload is a JSON object with the following properties:
 | --------- | --------------------------------- | ------------------------------ |
 | event     | The event name.                   | Always `conversation_started`  |
 | timestamp | The time the event was triggered. | Unix timestamp in milliseconds |
-| type      | The type of the conversation.     | Always `open` - The user initiated a conversation with the bot for the first time.|
+| type      | The type of the conversation.     | Always `open` - The user initiated a conversation with the bot for the first time |
 | context   | The context of the conversation.  |
 | user      | The subscriber object.            | See [Subscriber Object](../data-models/subscriber) |
 | message_token | Unique ID of the message. |

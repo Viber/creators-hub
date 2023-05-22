@@ -25,7 +25,7 @@ certificates list.
 
 Once the set_webhook request is sent, Viber will send a callback to the webhook to<br/>
 check its availability. The check will succeed if the Viber server receives an HTTP status<br/>
-code of 200 in response to the callback. If the response doesn't include "status":0, you<br/>
+code of 200 in response to the callback. If the response doesn't include `"status":0`, you<br/>
 should verify that all requests to your webhook URL receive an HTTP status code of 200.
 
 :::note
@@ -74,8 +74,8 @@ placeholder values.
 
 | Parameter   | Type             | Description                                                                  |
 | ----------- | ---------------- | ---------------------------------------------------------------------------- |
-| url         | string           | The URL to which the events will be sent.                                    |
-| event_types | array of strings | The list of events to be sent to the webhook.                                |
+| url         | string           | The URL to which the events will be sent                                    |
+| event_types | array of strings | The list of events to be sent to the webhook                                |
 | send_name   | boolean          | **Optional.** Whether to send the user name in the webhook. Default `false`  |
 | send_photo  | boolean          | **Optional.** Whether to send the user photo in the webhook. Default `false` |
 
@@ -127,8 +127,8 @@ The response to the set_webhook request will be a JSON object with the following
 
 ### Event Filtering
 
-The `set_webhook` API allows you to filter the events that trigger a callback to your<be/>
-webhook. You can do this by passing the event_types parameter in the API request.
+The `set_webhook` API allows you to filter the events that trigger a callback to your<br/>
+webhook. You can do this by passing the `event_types` parameter in the API request.
 
 There are certain events that are mandatory and cannot be filtered out. These events are:<br/>
 `message`, `subscribed`, and `unsubscribed`. These events will always trigger a<br/>
@@ -144,7 +144,7 @@ means that you will receive callbacks for all events, including both the mandato
 and the optional events.
 
 If you include the event_types parameter in your set_webhook request with an empty<br/>
-list ("event_types": []), it means that you will only receive callbacks for the<br/>
+list (`"event_types": []`), it means that you will only receive callbacks for the<br/>
 mandatory events.
 
 For more information on the different events and their descriptions, please refer to the<br/>

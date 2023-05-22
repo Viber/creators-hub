@@ -28,9 +28,9 @@ The subscriber object is a JSON object that contains the following fields:
 | ----- | ---- | ----------- |
 | id | string | The unique ID of the user. |
 | name | string | The user's name. |
-| avatar | string | The URL of the user's avatar |
+| avatar | string | The URL of the user's avatar. |
 | country | string | The user's country. |
 | language | string | The user's language. |
-| api_version | integer | The supported bots API version on the user's device |
+| api_version | integer | The supported bots API version on the user's device. |
 
 

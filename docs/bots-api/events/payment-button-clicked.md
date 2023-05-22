@@ -9,7 +9,7 @@ pagination_next: null
 ## Description
 
 The Payment Button Clicked event is triggered when a user taps on the payment<br/>
-provider's "Pay" button in the checkout page. This event provides information to the bot<bt/>
+provider's "Pay" button in the checkout page. This event provides information to the bot<br/>
 about the user's intention to make a payment.
 
 ## Event Payload
@@ -43,7 +43,7 @@ The event payload is a JSON object with the following properties:
 | --- | --- | --- |
 | event | The event name. | Always `client_status` |
 | timestamp | The time the event was triggered. | Unix timestamp in milliseconds |
-| message_token | Unique ID of the message |
-| chat_hostname | The hostname of the bot server |
+| message_token | Unique ID of the message. |
+| chat_hostname | The hostname of the bot server. |
 | user | The subscriber object. | See [Subscriber Object](../data-models/subscriber) |
 | status | The payment status object. | See [Payment Status Object](../data-models/payment-status) |

@@ -26,7 +26,7 @@ The webhook URL provided is invalid.<br/>
 This error occurs when the client provides an invalid URL as the webhook endpoint.<br/>
 The URL must be a valid, reachable URL that the server can send HTTP requests to. The client<br/>
 should check the URL and ensure that it is correct. If the problem persists, the client<br/>
-should contact the support team for assistance
+should contact the support team for assistance.
 
 ## Invalid Auth Token
 
@@ -64,7 +64,7 @@ This error occurs when the client sends a request that is missing required data 
 request must include all required fields in order for the server to process the request<br/>
 properly. The client should check the request data and ensure that all required fields are<br/>
 included. If the problem persists, the client should contact the support team for<br/>
-assistanc
+assistance.
 
 ## Reciever Not Registered
 
@@ -89,8 +89,8 @@ The receiver is not subscribed to the bot.
 This error occurs when the client attempts to send a message to a Viber user who is not<br/>
 subscribed to the bot. The receiver must be subscribed to the bot in order to receive<br/>
 messages from it. The client should check the receiver's subscription status and ensure<br/>
-that they are subscribed to the bot. If the problem persists, the<br/>
-client should contact the support team for assistance.
+that they are subscribed to the bot. If the problem persists, the client should contact<br/>
+the support team for assistance.
 
 ## Public Accout Blocked
 
@@ -149,7 +149,11 @@ The receiver's device or Viber version does not support bots.
 
 ### Explanation
 
-This error occurs when the client attempts to send a message to a Viber user who is using a device or Viber version that does not support bots. The receiver's device or Viber version must be compatible with the Viber bot platform in order to receive messages from the bot. The client should check the receiver's device and Viber version and ensure that they are compatible with the Viber bot platform. If the problem persists, the client should contact the support team for assistance.
+This error occurs when the client attempts to send a message to a Viber user who is using<br/>
+a device or Viber version that does not support bots. The receiver's device or Viber version<br/>
+must be compatible with the Viber bot platform in order to receive messages from the bot.<br/>
+The client should check the receiver's device and Viber version and ensure that they are<br/>compatible with the Viber bot platform. If the problem persists, the client should contact<br/>
+the support team for assistance.
 
 ## Too Many Requests
 
@@ -178,8 +182,7 @@ older version of the Viber API. The client has specified a minimum API version t
 larger than the receiver's supported API version, which means that the message cannot<br/>
 be delivered. To avoid this error, the client should ensure that the `minApiVersion`<br/>
 specified in the API request is equal to or lower than the API version supported by the<br/>
-receiver. If the problem persists, the client should contact the support team for<br/>
-assistance.
+receiver. If the problem persists, the client should contact the support team for assistance.
 
 ## Incompatible With Version
 
@@ -304,12 +307,11 @@ the [Payment API](./resources/pay/intro.md) section of the documentation.
 ## Free Messages Exceeded
 
 **code: 23**<br/>
-The non-billable bot has reached the monthly threshold of free out of session messages.
+The non-billable bot has reached the monthly threshold of free out-of-session messages.
 
 ### Explanation
 
-This error occurs when a non-billable bot has exceeded the monthly threshold of free out<br/>
-of session messages that it is allowed to send. Viber sets limits on the number of<br/>
+This error occurs when a non-billable bot has exceeded the monthly threshold of free<br/>out-of-session messages that it is allowed to send. Viber sets limits on the number of<br/>
 messages that non-billable bots can send in order to prevent spam and abuse. If the bot<br/>
 has reached this limit, the Viber API will return this error. To resolve this issue, the client<br/>
 can either switch to a billable bot or wait until the next billing cycle starts to send more<br/>
@@ -318,16 +320,16 @@ messages.
 ## No Balance
 
 **code: 24**<br/>
-The billable bot has reached its monthly threshold of free out of session messages and<br/>
+The billable bot has reached its monthly threshold of free out-of-session messages and<br/>
 there is no balance remaining.
 
 ### Explanation
 
-This error occurs when a billable bot has reached its monthly threshold for free out of<br/>
-session messages, but does not have any remaining balance. As a result, the bot is unable<br/>
-to send any additional messages. To resolve this issue, the client should either add funds<br/>
-to the bot's account or switch to a non-billable bot that has a monthly threshold for free<br/>
-out of session messages.
+This error occurs when a billable bot has reached its monthly threshold for free<br/>
+out-of-session messages, but does not have any remaining balance. As a result, the bot<br/>
+is unable to send any additional messages. To resolve this issue, the client should either<br/>
+add funds to the bot's account or switch to a non-billable bot that has a monthly<br/>
+threshold for free out-of-session messages.
 
 ## General Error
 
@@ -339,5 +341,5 @@ An unknown error has occurred
 This error occurs when an unexpected issue arises that is not covered by any of the<br/>
 previously listed error codes. This could be due to various reasons such as an issue with<br/>
 the Viber API, a problem with the client request, or a technical issue with the bot. In this<br/>
-case, it is recommended to check the request details and try again or to reach out to Viber<br/>
-support for further assistance in resolving the issue.
+case, it is recommended to check the request details and try again, or to reach out to<br/>
+Viber support for further assistance in resolving the issue.

@@ -23,17 +23,17 @@ See the figure below to understand the flow of the payment request.
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| receiver | string | The id of the subscriber. | |
+| receiver | string | The ID of the subscriber. | |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The avatar of the bot. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| min_api_version | integer | The minimum API version of the subscriber. | **Required.** Payment request are supported from v10 and above|
-|type|string|The type of the message.|**Required.** Must be `payment`|
-|payment|object|The payment object.|**Required.**|
-|payment.type|string|The type of the payment.|**Required.** . Currently only “GooglePay” for Android devices and “ApplePay” for iOS devices are valid. |
-|payment.description|string|The description of the payment.|**Optional.**|
-|payment.total_price|float|The total price of the payment.|**Required.** For example 30.56|
-payment.currency_code|string|The currency code of the payment.|**Required.** Currency string according to [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#:~:text=US%22%20(United%20States).-,List%20of%20ISO%204217%20currency%20codes,-%5Bedit%5D) format (e.g American dollar would be `USD`).|
-|payment.payment_parameters|object|The payment parameters object.|**Required.** The payment paramters are different for each payment service provider. You can learn more about them and how to get them in the [Setup Payment Account](setup-payment-account#payment-parameters) section|
+| min_api_version | integer | The minimum API version of the subscriber. | **Required.** Payment request are supported from v10 and above. |
+|type|string|The type of the message.|**Required.** Must be `payment`. |
+| payment | object | The payment object. | **Required.** |
+| payment.type | string | The type of the payment. | **Required.** Currently only “Google Pay” for Android devices and “Apple Pay” for iOS devices are valid. |
+| payment.description | string | The description of the payment. | **Optional.** |
+| payment.total_price | float | The total price of the payment. | **Required.** For example 30.56. |
+payment.currency_code | string | The currency code of the payment. | **Required.** Currency string according to [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#:~:text=US%22%20(United%20States).-,List%20of%20ISO%204217%20currency%20codes,-%5Bedit%5D) format (e.g American dollar would be `USD`). |
+| payment.payment_parameters | object | The payment parameters object. | **Required.** The payment paramters are different for each payment service provider. You can learn more about them and how to get them in the [Setup Payment Account](setup-payment-account#payment-parameters) section. |
 
 ```bash title="Example"
 curl -X POST https://chatapi.viber.com/pa/send_message -H "X-Viber-Auth-Token: YOUR_AUTHENTICATION_TOKEN" -d
@@ -46,11 +46,11 @@ curl -X POST https://chatapi.viber.com/pa/send_message -H "X-Viber-Auth-Token: Y
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| status | integer | The status of the request. | 0 for success. In case of failure - appropriate failure status number. See [common errors](../../errors) for more information |
-| status_message | string | The status message of the request. | Success: ok. Failure: `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information |
-| message_token | integer | Unique id of the message | |
-| chat_hostname | string | The name of ther server that host your bot | for internal use |
-|billing_status | string | An indication of how this message is categorized for billing purposes, allowing you to know if it was charged or not, or whether it counts toward. Read more about bots billing [here](https://help.viber.com/en/article/chatbot-commercial-model) | An integer between 0 and 5. See the table in [billing statuses](#billing-statuses) section below for more information|
+| status | integer | The status of the request. | 0 for success. In case of failure - appropriate failure status number. See [common errors](../../errors) for more information. |
+| status_message | string | The status message of the request. | Success: ok. Failure: `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information. |
+| message_token | integer | Unique id of the message. | |
+| chat_hostname | string | The name of ther server that hosts your bot. | for internal use. |
+| billing_status | string | An indication of how this message is categorized for billing purposes, allowing you to know if it was charged or not, or whether it counts towards billed messages. Read more about bots billing [here](https://help.viber.com/en/article/chatbot-commercial-model). | An integer between 0 and 5. See the table in [billing statuses](#billing-statuses) section below for more information. |
 
 ```json title="Example"
 {

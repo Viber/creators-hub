@@ -31,13 +31,13 @@ The following limitations apply to broadcast messages:
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| type | string | The type of the message. | **Required.** one of the available message types. See full list [here](../../data-models/message.md) |
+| type | string | The type of the message. | **Required.** one of the available message types. See full list [here](../../data-models/message.md). |
 | sender.name | string | The name of the bot. | **Required.** Max 28 characters. |
 | sender.avatar | string | The avatar of the bot. | **Optional.** the avatar size should not exceed 100KB. The recommended dimensions for the avatar are 720x720. |
-| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional** Max 4000 characters |
+| tracking_data | string | Allow the bot to track messages and user’s replies. The tracking_data value sent with the message will be returned with the user's reply. | **Optional** Max 4000 characters. |
 | min_api_version | integer | The minimum API version that the message is supported in. | **Optional** Default value is 1. |
-| broadcast_list | array of strings | The list of subscribers ids. | Max 300 ids |
-| Additional fileds based on the message type | | | |
+| broadcast_list | array of strings | The list of subscribers ids. | Max 300 IDs. |
+| Additional fields based on the message type | | | |
 
 ```bash title="Example"
 curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Token: YOUR_AUTHENTICATION_TOKEN" -d '{"type":"text","text":"Hello World","sender":{"name":"Viber Bot","avatar":"http://avatar.example.com"},"broadcast_list":["jc9HsWTZ2Yf2NkRZ8KcNug==","fd4HsWT33Yf1BkRZ8KcBsk=="]}'
@@ -49,11 +49,11 @@ curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Tok
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| status | integer | The status of the request. | 0 for success. In case of failure - appropriate failure status number. See [common errors](../../errors) for more information |
-| status_message | string | The status message of the request. | Success: ok. Failure: `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information |
-| message_token | integer | Unique id of the message | |
-| chat_hostname | string | The name of ther server that host your bot | for internal use |
-|billing_status | string | An indication of how this message is categorized for billing purposes, allowing you to know if it was charged or not, or whether it counts toward. Read more about bots billing [here](https://help.viber.com/en/article/chatbot-commercial-model) | An integer between 0 and 5. See the table in [billing statuses](#billing-statuses) section below for more information|
+| status | integer | The status of the request. | 0 for success. In case of failure - appropriate failure status number. See [common errors](../../errors) for more information. |
+| status_message | string | The status message of the request. | Success: ok. Failure: `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information. |
+| message_token | integer | Unique ID of the message. | |
+| chat_hostname | string | The name of ther server that hosts your bot. | For internal use. |
+|billing_status | string | An indication of how this message is categorized for billing purposes, allowing you to know if it was charged or not, or whether it counts toward. Read more about bots billing [here](https://help.viber.com/en/article/chatbot-commercial-model). | An integer between 0 and 5. See the table in [billing statuses](#billing-statuses) section below for more information. |
 
 ```json title="Example"
 {
@@ -74,4 +74,3 @@ curl -X POST https://chatapi.viber.com/pa/broadcast_message -H "X-Viber-Auth-Tok
 | 3 | outOfSessionFreeMessageNonBillableBot | Free out of session 1:1 message/keyboard sent by a non-billable bot |
 | 4 | outOfSessionFreeMessageForBillableBot | Free out of session 1:1 message/keyboard sent by a billable bot |
 | 5 | outOfSessionBilledMessage | Charged out of session 1:1 message/keyboard sent by a billable bot |
-

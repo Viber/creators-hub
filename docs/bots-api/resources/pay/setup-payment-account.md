@@ -7,8 +7,8 @@ sidebar_position: 2
 
 To setup a payment account, you will need to contact one of the payment service providers<br/>
 (PSP) and request to enable payment for your bot.
-You might also need to contact the merchant you work with to get the credentials for the<br/>
-payment service provider.
+You might also need to contact the<br/>
+merchant you work with to get the credentials for the payment service provider.
 
 ## Enable Payment
 
@@ -21,7 +21,7 @@ payment for your bot:
 
 Then the following steps should be performed:
 
-- The payment service provider (PSP) will perform all necessary checks, sign an<br/>
+- The payment service provider (PSP) will perform all the necessary checks, sign an<br/>
   agreement with the merchant, approve the request, and then submit a request to Viber<br/>
   to enable the payments feature for your chatbot.
 
@@ -32,13 +32,13 @@ Then the following steps should be performed:
 - If Viber approves the request, the payment feature will be enabled on your bot, and<br/>
   both the merchant and the PSP will receive notification of the approval.
 
-Once you get the approval you will need to request test and production parameters from<br/>
-the PSP or the marchant you work with. See the section [payment parameters](#payment-credentials) below.
+Once you get the approval, you will need to request test and production parameters from<br/>
+the PSP or the merchant you work with. See the section [payment parameters](#payment-credentials) below.
 
 ## Payment Parameters
 
-To send payment requests you will need to privde the credentials for the PSP you have<br/>
-chosen. Each PSP has its own set of credentials, the following guides will help you to<br/>
+To send payment requests, you will need to provide the credentials for the PSP you have<br/>
+chosen. Each PSP has its own set of credentials, the following guides will help you<br/>
 understand what credentials you need to provide:
 
 ### LiqPay
@@ -47,12 +47,12 @@ The following parameters are required to send payment requests through LiqPay:
 
 | Key | Value | Source | Description |
 | --- | --- | --- | --- |
-| gateway | liqpay | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems |
-| getwayMerchantId | Merchant ID | Marchant | Merchant Public Key in LiqPay PSP system For more info click [here](https://www.liqpay.ua/en/adminbusiness/) |
-| url | https://<area/>liqpay.ua/api/viber | Payment service provider | URL for payment requests to the paymen service provider |
-| data | any string | Marchant | Enqrypted data about a purchase. For more info click [here](https://www.liqpay.ua/documentation/en/data_signature) |
-| signature | any string | Marchant | Merchant authentication signature in the payment service provider system. For more info click [here](https://www.liqpay.ua/documentation/en/data_signature) |
-| payeeId | any string | Marchant | Merchant Public Key in LiqPay PSP system. For more info click here [here](https://www.liqpay.ua/en/adminbusiness/) |
+| gateway | liqpay | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems. |
+| getwayMerchantId | Merchant ID | Merchant | Merchant Public Key in LiqPay PSP system. For more info click [here](https://www.liqpay.ua/en/adminbusiness/). |
+| url | https://<area/>liqpay.ua/api/viber | Payment service provider | URL for payment requests to the payment service provider. |
+| data | any string | Merchant | Encrypted data about a purchase. For more info, click [here](https://www.liqpay.ua/documentation/en/data_signature). |
+| signature | any string | Merchant | Merchant authentication signature in the payment service provider system. For more info, click [here](https://www.liqpay.ua/documentation/en/data_signature). |
+| payeeId | any string | Merchant | Merchant Public Key in LiqPay PSP system. For more info, click [here](https://www.liqpay.ua/en/adminbusiness/). |
 
 Here is an example of a payment request to LiqPay, note the payment parameters<br/>
 fields under the `payment` key:
@@ -95,13 +95,13 @@ The following parameters are required to send payment requests through Portmone:
 
 | Key | Value | Source | Description |
 | --- | --- | --- | --- |
-| gateway | portmonecom | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems |
-| getwayMerchantId | Merchant ID | Marchant | Merchant ID in Portmone system |
-| url | https://<area/>portmone.com.ua/r3/en/api/gateway/ | Payment service provider | URL for payment requests to the paymen service provider |
-| login | any string| Marchant | Merchant login in Portmone system |
-| password | any string | Marchant | Merchant password or token in Portmone system. Using a generated password token is recommended but not required. The token will conceal your actual password from the request body. You can access the password in the 'Personal Area' of the [Portmone website](https://www.portmone.com.ua/b2b_dash/login) or in the [Portmone developer documentation](https://docs.portmone.com.ua/docs/en/PaymentGatewayEng/#32-json-request). |
+| gateway | portmonecom | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems. |
+| getwayMerchantId | Merchant ID | Merchant | Merchant ID in Portmone system. |
+| url | https://<area/>portmone.com.ua/r3/en/api/gateway/ | Payment service provider | URL for payment requests to the payment service provider. |
+| login | any string| Merchant | Merchant login in Portmone system. |
+| password | any string | Merchant | Merchant password or token in the Portmone system. Using a generated password token is recommended (but not required). The token will conceal your actual password from the request body. You can access the password in the 'Personal Area' of the [Portmone website](https://www.portmone.com.ua/b2b_dash/login) or in the [Portmone developer documentation](https://docs.portmone.com.ua/docs/en/PaymentGatewayEng/#32-json-request). |
 
-Here is an example of a payment request to LiqPay, note the payment parameters<br/>
+Here is an example of a payment request to Portmone, note the payment parameters<br/>
 fields under the `payment` key:
 ```json title="Portmone payment request example"
 {
@@ -139,10 +139,10 @@ The following parameters are required to send payment requests through IPay.ua:
 
 | Key | Value | Source | Description |
 | --- | --- | --- | --- |
-| gateway | ipay | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems |
-| getwayMerchantId | Merchant ID | Marchant | Merchant ID in IPay.ua system |
-| url | https://<area/>api-viber.ipay.ua | Payment service provider | URL for payment requests to the paymen service provider |
-| subMerchantId | any string | Marchant | Merchant ID in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings) |
-| authSalt | any string | Marchant | Merchant password or token in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings) |
-| authSign| any string | Marchant | Merchant password or token in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings) |
-| transactions	| any string | Marchant | **Optional. ** An array of transactions, as a string, not a JSON array. each object is composed of the following fields: desc and amount. For example: `[{\"desc\":\"test\",\"amount\":30}]` |
+| gateway | ipay | Payment service provider | Payment service provider ID in Google Pay and Apple Pay systems. |
+| getwayMerchantId | Merchant ID | Merchant | Merchant ID in IPay.ua system. |
+| url | https://<area/>api-viber.ipay.ua | Payment service provider | URL for payment requests to the payment service provider. |
+| subMerchantId | any string | Merchant | Merchant ID in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings). |
+| authSalt | any string | Merchant | Merchant password or token in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings). |
+| authSign| any string | Merchant | Merchant password or token in IPay.ua system. Can be found [here](https://api-viber.ipay.ua/doc#Settings). |
+| transactions	| any string | Merchant | **Optional. ** An array of transactions, as a string, not a JSON array. each object is composed of the following fields: desc and amount. For example: `[{\"desc\":\"test\",\"amount\":30}]` |

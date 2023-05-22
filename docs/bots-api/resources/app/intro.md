@@ -3,7 +3,7 @@ sidebar_label: Introduction
 sidebar_position: 1
 ---
 
-The Application section of the Viber Bot API documentation currently provides information<br/>
+The Application section of the Viber Bot API documentation currently provides instructions<br/>
 on how to retrieve information about your bot. Specifically, it covers the<br/>
 `get_account_info` API endpoint, which allows you to obtain details about your bot, such<br/>
 as its name, icon, and description.

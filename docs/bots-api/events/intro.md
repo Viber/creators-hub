@@ -8,7 +8,7 @@ pagination_prev: null
 
 [//]: comment "an intro to events module of the bots api"
 
-The events section of the bots API is your one-stop resource for all the events supported<br/>
+The **events** section of the bots API is your one-stop resource for all the events supported<br/>
 by the platform. In this section, you will find detailed information on each event, including<br/>
 its data, trigger conditions, and additional information that can help you make the most of<br/>
 these events in your bot implementation.

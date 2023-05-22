@@ -26,21 +26,21 @@ curl -X GET https://chatapi.viber.com/pa/get_account_info -H "X-Viber-Auth-Token
 ---
 | Name | Type | Description | Notes |
 | --- | --- | --- | --- |
-| status | integer | The status of the request. | 0 for success. In case of error, an error code will be returned. See [common errors](../../errors) for more information |
-| status_message | string | The status message of the request. | ok for sucess. In case of error, one of the following errors will be returned:  `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information |
+| status | integer | The status of the request. | 0 for success. In case of error, an error code will be returned. See [common errors](../../errors) for more information. |
+| status_message | string | The status message of the request. | ok for sucess. In case of error, one of the following errors will be returned:  `invalidUrl`, `invalidAuthToken`, `badData`, `missingData` and `failure`. See [common errors](../../errors) for more information. |
 | id | string | The unique id of the bot. | |
-| name | string | The name of the bot. | Max 75 characters |
+| name | string | The name of the bot. | Max 75 characters. |
 | uri | string | The uri of the bot. | |
-| icon | string | The icon of the bot. | jpeg, max size of 521KB. Recommended dimensions 720x720 |
-| background | string | The background of the bot. | jpeg, max size of 512KB. Max dimensions 1920x1920 |
+| icon | string | The icon of the bot. | jpeg, max size of 521KB. Recommended dimensions 720x720. |
+| background | string | The background of the bot. | jpeg, max size of 512KB. Max dimensions 1920x1920. |
 | category | string | The category of the bot. | |
 | subcategory | string | The subcategory of the bot. | |
-| location | object | The location of the bot. | Allow the users to find the bot close to their location|
-| Country | string | The country of the bot owner. | 2 letters country code - [ISO Aplha-2](https://www.iban.com/country-codes) |
+| location | object | The location of the bot. | Allow the users to find the bot close to their location. |
+| Country | string | The country of the bot owner. | 2 letters country code - [ISO Aplha-2](https://www.iban.com/country-codes). |
 | webhook | string | The webhook of the bot. | |
 | event_types | array | The evets that the bot is registred to. | |
 | subscribers_count | integer | The number of subscribers of the bot. | |
-| members | array of objects | The list of people who have access for managing the bot. each member object has an `id`, `name`, `avatar` and `role` | deprecated |
+| members | array of objects | The list of people who have access for managing the bot. each member object has an `id`, `name`, `avatar` and `role`. | Deprecated. |
 #### Headers
 ---
 **Content-Type:** application/json

@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Viber Bot Payments API
 
-Certainly! The Payment section of the Viber Bot API documentation provides information<br/>
+The Payment section of the Viber Bot API documentation provides information<br/>
 on how to set up payment functionality for your bot. This includes the ability to create a<br/>
 payment account, as well as how to send payment requests to your users.
 

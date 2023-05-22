@@ -47,4 +47,4 @@ The event payload is a JSON object with the following properties:
 | timestamp | The time the event was triggered. | Unix timestamp in milliseconds |
 | sender | The subscriber object. | See [Subscriber Object](../data-models/subscriber) |
 | message | The message object. | See [Message Object](../data-models/message) |
-| message_token | Unique ID of the message |
+| message_token | Unique ID of the message. |

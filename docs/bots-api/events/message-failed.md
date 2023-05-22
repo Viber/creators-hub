@@ -37,7 +37,5 @@ The event payload is a JSON object with the following properties:
 | event | The event name. | Always `failed` |
 | timestamp | The time the event was triggered. | Unix timestamp in milliseconds |
 | message_token | Unique ID of the message. |
-| user_id | The unique ID of the subscriber |
+| user_id | The unique ID of the subscriber. |
 | desc | A string explaining the failure. |
-
-

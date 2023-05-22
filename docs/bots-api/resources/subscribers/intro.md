@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Viber Bot Subscribers API
 
-Welcome to the subscribers section of the Viber Bot API documentation! As a bot<br/>
+Welcome to the subscribers section of the Viber Bot API documentation. As a bot<br/>
 developer, it is essential to understand your user base and be able to interact with them<br/>
 effectively. The Viber Bot API provides several features that allow you to access your<br/>
 subscribers' information and online status.

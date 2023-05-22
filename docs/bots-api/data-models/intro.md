@@ -20,4 +20,3 @@ The platform uses the following data models for communication with your bot:
 * [Message](./message) - The message data model is used to represent all types of messages that can be sent to a user.
 * [Subscriber](./subscriber) - The subscriber data model is used to represent a user who has subscribed to your bot.
 * [Payment Status](./payment-status) - The payment status data model is used to represent the status of a payment transaction.
-
